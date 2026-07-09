@@ -1,0 +1,269 @@
+.header {
+    background-color: #002060;
+    color: white;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Espacio entre input y botón */
+  margin-bottom: 1rem;
+}
+
+.search-bar {
+  width: 250px;
+  min-width: 250px; /* Ancho mínimo del input */
+  height: 38px; /* Altura del input */
+  padding: 8px;
+  flex: 1;
+  padding: 8px;
+  font-size: 1rem;
+}
+
+  .header img {
+    width: 60px;
+    vertical-align: middle;
+    margin-right: 18px;
+  }
+  
+  .header h1 {
+    display: inline-block;
+    color: #C3943A;
+    margin: 0;
+    font-size: 24px;
+    vertical-align: middle;
+  }
+  
+  .header h2 {
+    margin: 0;
+    color: white;
+    font-size: 22px;
+    font-weight: normal;
+  }
+  
+  .alumno-container {
+    flex: 1; /* Hace que el contenido principal ocupe el espacio restante */
+    padding: 20px;
+    text-align: center;
+    background-color: white;
+    position: relative;
+  }
+  
+  h3, h4 {
+    color: hwb(220 0% 62%);
+  }
+  
+  .info {
+    text-align: left;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+
+  .alumno-scrollable-table {
+    max-height: 750px;
+    overflow-y: auto;
+  }
+  
+  .alumnos-table {
+    width: 100%;
+    table-layout: auto; /* Permite que el ancho de columna se ajuste al contenido */
+    height: 900px;
+    border-collapse: collapse;
+    margin-bottom: 100px;
+    text-align: left;
+  }
+  
+  .alumnos-table, th, td {
+    border: 1px solid #ccc;
+    height: 20px;
+    white-space: nowrap;      /* Evita saltos de línea */
+    max-width: 150px;           /* Permite que la columna solo crezca según el contenido */
+    height: 20px; /* Uniform row height for all table rows */
+  }
+  
+  .alumnos-table th, .alumnos-table td {
+    padding: 10px;
+    text-align: center;
+    height: 20px; /* Uniform row height for all table rows */
+  }
+
+  .action-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0px; /* Añade espacio entre los botones */
+}
+
+
+  
+  .alumnos-table th {
+    background-color: #002060;
+    color: white;
+    height: 20px; /* Ajusta el tamaño de la fila del encabezado para uniformidad */
+  }
+  
+  .close-session {
+    float: right;
+    margin-top: -30px;
+    background-color: #f0f0f0;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: red;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .close-session:hover {
+    background-color: #e0e0e0;
+  }
+
+  
+  .icon-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .icon-button svg {
+  width: 25 !important;
+  height: 25 !important;
+  }
+  
+  .add-delete-buttons {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .add-delete-buttons button {
+    background-color: #002060;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .add-delete-buttons button:hover {
+    background-color: #00308f;
+  }
+  
+  
+.logout-button:hover {
+  background-color: #d32f2f; /* Color de fondo al pasar el cursor */
+}
+.status-icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.gray {
+  background-color: gray;
+}
+
+.green {
+  background-color: green;
+}
+
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.add-delete-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.materia-table {
+    width: 100%;
+    height: 900px;
+    border-collapse: collapse;
+    margin-bottom: 0px;
+    text-align: left;
+}
+
+.materia-table th, 
+.materia-table td {
+    border: 1px solid #ccc;
+    text-align: center;
+    font-size: 8px;  
+    overflow: hidden;
+    height: 20px; /* Uniform row height for all table rows */
+}
+
+.materia-table th {
+    background-color: #002060;
+    color: white;
+    height: 20px; /* Adjust header row height for uniformity */
+}
+
+.materia-table th:last-child, 
+.materia-table td:last-child {
+    width: 180px; /* Adjust width of the "Actions" column */
+}
+
+/* Si la columna de nombre es la 2ª columna */
+.alumnos-table td:nth-child(3),
+.alumnos-table th:nth-child(3) {
+  min-width: 150px;   /* Ajusta el valor según lo que necesites */
+  max-width: 400px;   /* Opcional: limita el ancho máximo */
+  white-space: normal; /* Permite saltos de línea si el nombre es muy largo */
+  word-break: break-word;
+}
+
+/* Si la columna de nombre es la 2ª columna */
+.alumnos-table td:nth-child(4),
+.alumnos-table th:nth-child(4) {
+  min-width: 150px;   /* Ajusta el valor según lo que necesites */
+  max-width: 400px;   /* Opcional: limita el ancho máximo */
+  white-space: normal; /* Permite saltos de línea si el nombre es muy largo */
+  word-break: break-word;
+}
+
+/* Si la columna de nombre es la 2ª columna */
+.alumnos-table td:nth-child(5),
+.alumnos-table th:nth-child(5) {
+  min-width: 150px;   /* Ajusta el valor según lo que necesites */
+  max-width: 400px;   /* Opcional: limita el ancho máximo */
+  white-space: normal; /* Permite saltos de línea si el nombre es muy largo */
+  word-break: break-word;
+}
+.clear-filter-button {
+  padding: 8px 12px;
+  font-size: 0.95rem;
+  background-color: #002060;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.clear-filter-button:hover {
+  background-color: #002060;
+}

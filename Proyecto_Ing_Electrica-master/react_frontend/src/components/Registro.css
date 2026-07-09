@@ -1,0 +1,331 @@
+/* Agrupa label e input en una sola línea y limita el ancho */
+.field-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  max-width: 100%;
+  margin-bottom: 16px;
+}
+
+.registro-label {
+  width: 120px;
+  min-width: 80px;
+  max-width: 140px;
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #002a5c;
+  margin-bottom: 0;
+  text-align: left;
+}
+
+.password-input-wrapper, .field-group input {
+  flex: 1 1 0;
+  min-width: 0;
+  max-width: 100%;
+}
+/* Wrapper para el input y botón de contraseña */
+.password-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-input-wrapper input {
+  width: 100%;
+  padding-right: 36px;
+}
+
+.toggle-password-button {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  z-index: 2;
+}
+/* GENERAL */
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden; /* Evita scroll horizontal */
+  width: 100%;
+  max-width: 100%;
+  font-family: sans-serif;
+}
+
+/* Pie de página */
+.footer {
+  width: 100%;
+  text-align: center;
+  padding: 12px 0;
+  background: #f0f2f5;
+  border-radius: 0 0 18px 18px;
+  color: #002a5c;
+  font-size: 1rem;
+}
+/* Layout Principal */
+.registro-layout {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 5%;
+  gap: 15px;
+}
+
+/* Contenedor principal */
+.registro-container {
+  width: 100%;
+  max-width: 600px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+  padding: 32px 28px 24px;
+  margin: 30px auto;
+  overflow: hidden;
+}
+
+.registro-container h1 {
+  margin-top: 20px;
+}
+
+.registro-label {
+  display: block;
+  margin-bottom: 8px;
+  text-align: left;
+  color: #002a5c;
+  font-weight: bold;
+}
+
+
+.registro-label {
+  text-align: left;
+  min-width: 50px; /* o el ancho que necesites */
+  max-width: 150px; /* o el ancho que necesites */
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #002a5c;
+}
+
+
+
+.radio-option {
+  display: flex;
+  align-items: center;
+}
+
+.radio-option input[type="radio"] {
+  margin-right: 5px;
+}
+
+/* Botones */
+.login-button-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.login-button {
+  width: 100%;
+  max-width: 150px;
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 5px;
+  background-color: #002a5c;
+  color: white;
+  border: none;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.forgot-button {
+  width: auto;
+  padding: 6px 10px;
+  font-size: 0.8rem;
+  margin-top: 5px;
+  display: block;
+  text-align: right;
+  margin-left: auto;
+}
+
+/* Secciones laterales */
+.session-selection,
+.login-section {
+  width: 100%;
+  background-color: #f0f2f5;
+  padding: 25px;
+  border-radius: 0px;
+  margin-bottom: 0px;
+}
+
+.session-selection h2,
+.login-section h2 {
+  color: #002a5c;
+  font-size: 1.5rem;
+  margin-top: 0;
+}
+
+.password-input-wrapper {
+  width: 100%;
+  position: relative;
+}
+
+.password-input-wrapper input {
+  width: 100%;
+  padding-right: 36px;
+}
+
+.toggle-password-button {
+  position: absolute;
+  right: 8px;
+  top: 28%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .field-group {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #002a5c;
+    margin-bottom: 16px;
+  }
+
+  .App {
+    padding: 10px;
+  }
+
+  .registro-label {
+    width: 100%;
+    min-width: unset;
+    font-size: 1rem;
+    margin-bottom: 6px;
+  }
+
+  .registro-layout {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+
+  .registro-container {
+    padding: 20px;
+    margin-top: 20px;
+  }
+
+  .field-group label,
+  .field-group input{
+    width: 100%;
+    flex: none;
+  
+  }
+  .field-group select {
+    width: 100%;
+  }
+
+
+  .session-selection,
+  .login-section {
+    max-width: 100%;
+    width: 100%;
+    margin: 20px 0;
+    border-radius: 0;
+  }
+
+  .session-selection h2,
+  .login-section h2 {
+    font-size: 1.2rem;
+  }
+
+  .forgot-button {
+    font-size: 0.7rem;
+  }
+
+  .footer {
+    border-radius: 0 0 10px 10px;
+    font-size: 0.9rem;
+    padding: 10px 0;
+  }
+
+  .radio-group {
+  display: flex;
+  flex-direction: row !important; /* Fuerza horizontal siempre */
+  align-items: center;
+  flex-wrap: nowrap; /* No permite salto de línea */
+  gap: 15px;
+  margin-top: 20px;
+}
+
+}
+
+@media (min-width: 769px) {
+  .field-group {
+    display: flex;
+    width: 380px;
+    align-items: center;
+    gap: 12px;
+    color: #002a5c;
+    margin-bottom: 16px;
+  }
+
+  .field-group label {
+    width: 140px; /* Fijo para alinear */
+    font-weight: bold;
+    text-align: left;
+    margin: 0;
+    align-self: flex-start; /* Alinea el texto arriba si los radios son verticales */
+    padding-top: 6px; /* Ajusta si necesitas más alineación */
+  }
+
+  .field-group .radio-group {
+    display: flex;
+    gap: 1px;
+    flex-wrap: nowrap;
+    align-items: center; /* Alinea los radios con el texto */
+  }
+
+  .field-group select {
+    flex: 1;
+    max-width: 215px; /* Permite ocupar el espacio restante */
+    width: 100%;
+    min-width: 150px;
+  }
+
+  .registro-layout {
+    display: flex;
+    justify-content: center;
+    align-items: stretch; /* o center si prefieres centrado vertical */
+    gap: 40px; /* espacio entre los dos recuadros */
+    padding: 20px 0;
+  }
+
+  .registro-container {
+    flex: 1 1 45%; /* permite crecer, pero mantiene proporción */
+    min-width: 300px; /* evita que se hagan demasiado pequeños */
+    max-width: 450px; /* opcional para controlar el máximo */
+  }
+
+}

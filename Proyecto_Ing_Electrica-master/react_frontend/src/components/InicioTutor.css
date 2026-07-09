@@ -1,0 +1,250 @@
+.tutor-layout {
+  display: flex;
+  width: 100%;
+}
+
+.search-bar {
+  width: 100%; /* Ajusta el ancho al 100% del contenedor */
+  max-width: 800px; /* Define un ancho máximo para el search bar */
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  box-sizing: border-box; /* Incluye el padding y el borde en el ancho total */
+}
+
+.sidebar {
+  width: 200px; /* Ajusta el ancho de las barras laterales */
+  background-color: #e0e0e0; /* Color de fondo de las barras laterales */
+}
+.top-right {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1; /* Asegura que se mantenga en la parte superior */
+}
+.tutor-container {
+  flex: 1; /* Hace que el contenido principal ocupe el espacio restante */
+  padding: 20px;
+  text-align: center;
+  background-color: white;
+  position: relative; /* Permite el posicionamiento relativo del botón */
+}
+
+.tutor-container h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #002a5c;
+}
+
+.tutor-container p {
+  color: #555;
+}
+
+.tutor-content {
+  margin: 0 auto;
+  overflow-x: auto;
+  width: 100%;
+  max-width: 100%;
+}
+
+
+.tutor-table {
+  min-width: 800px; /* <-- antes decía '00px', lo cual es inválido */
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  table-layout: fixed; /* Columnas de ancho fijo */
+}
+
+.tutor-table svg {
+  max-height: 24px;
+  vertical-align: middle;
+}
+
+
+
+.tutor-table th {
+  background-color: #002a5c; /* Azul UAZ */
+  color: white;
+  min-height: 100px;
+  vertical-align: middle;
+  padding: 12px;
+  line-height: 1.4;
+  text-align: center;
+  white-space: normal;
+  word-break: break-word;
+}
+
+.tutor-table td {
+  min-height: 100px;
+  vertical-align: middle;
+  padding: 12px;
+  line-height: 1.4;
+  text-align: center;
+  white-space: normal;
+  word-break: break-word;
+}
+
+.tutor-table th:nth-child(1),
+.tutor-table td:nth-child(1) {
+  width: 20%;
+}
+
+.tutor-table th:nth-child(2),
+.tutor-table td:nth-child(2) {
+  width: 25%;
+}
+
+.tutor-table th:nth-child(3),
+.tutor-table td:nth-child(3) {
+  width: 35%;
+}
+
+.tutor-table th:nth-child(4),
+.tutor-table td:nth-child(4) {
+  width: 20%;
+}
+
+.tutor-table th:nth-child(5),
+.tutor-table td:nth-child(5) {
+  width: 15%;
+  min-width: 120px;
+  text-align: center;
+}
+
+.tutor-table th:nth-child(6),
+.tutor-table td:nth-child(6) {
+  width: 15%;
+  min-width: 120px;
+  text-align: center;
+}
+
+
+
+.tutor-table img {
+  width: 24px; /* Ajusta el tamaño según sea necesario */
+  height: 24px; /* Ajusta el tamaño según sea necesario */
+  vertical-align: middle; /* Alinea los íconos verticalmente al centro */
+}
+
+.tutor-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #002a5c;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #003a8c;
+}
+
+.field-group {
+  display: flex;
+  flex-wrap: wrap; /* Permite que el contenido se ajuste en columnas */
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.field-group label {
+  width: 100px;
+  margin-right: 10px;
+  text-align: left; /* Alinea el texto a la derecha */
+}
+
+.field-group input,
+.field-group select {
+  flex: 1;
+  min-width: 0; /* Evita que el input se expanda fuera del contenedor */
+  padding: 8px;
+  margin-top: 5px;
+}
+
+.icon-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.icon-button svg {
+  width: 24px; /* Ajusta el tamaño según sea necesario */
+  height: 24px; /* Ajusta el tamaño según sea necesario */
+  vertical-align: middle;
+}
+
+.status-circle {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  position: relative;
+}
+
+.status-circle svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.validated {
+  background-color: green;
+}
+
+.rejected {
+  background-color: red;
+}
+
+.pending {
+  background-color: rgb(255, 230, 0);
+}
+
+.not-uploaded {
+  background-color: gray;
+}
+
+
+
+.logout-button {
+  background-color: #f44336; /* Color de fondo del botón */
+  color: white; /* Color del texto */
+  border: none; /* Sin borde */
+  padding: 10px 20px; /* Espaciado interno */
+  text-align: center; /* Alineación del texto */
+  text-decoration: none; /* Sin subrayado */
+  display: inline-block; /* Mostrar en línea */
+  font-size: 16px; /* Tamaño de la fuente */
+  margin: 4px 2px; /* Margen */
+  cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
+  border-radius: 12px; /* Bordes redondeados */
+}
+
+.logout-button:hover {
+  background-color: #d32f2f; /* Color de fondo al pasar el cursor */
+}
+.status-icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.gray {
+  background-color: gray;
+}
+
+.green {
+  background-color: green;
+}

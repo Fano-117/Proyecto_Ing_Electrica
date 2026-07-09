@@ -1,0 +1,174 @@
+
+/* Agrupación horizontal para los campos de correo y teléfono */
+.form-group {
+  display: flex;
+  gap: 40px; /* separa los bloques "correo" y "teléfono" */
+  align-items: center;
+  justify-content: center; /* Centra horizontalmente los campos */
+  margin-bottom: 10px;
+}
+
+.form-item {
+  display: flex;
+  align-items: center;
+}
+
+.form-item label {
+  margin-right: 8px;
+  white-space: nowrap;
+}
+
+.form-item input {
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+
+.form-group label {
+  margin-right: 8px;
+  font-weight: 500;
+}
+
+.form-group input {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  min-width: 200px;
+}
+.horario-layout {
+    position: relative;
+    display: flex;
+    width: 100%;
+  }
+  
+  .sidebar {
+    width: 200px; /* Ajusta el ancho de las barras laterales */
+    background-color: #e0e0e0; /* Color de fondo de las barras laterales */
+  }
+  
+  .horario-container {
+    position: relative;
+    flex: 1; /* Hace que el contenido principal ocupe el espacio restante */
+    padding: 20px 0 20px 0;
+    background-color: white;
+  }
+
+  .horario-container h2,
+.horario-container p {
+  text-align: center;
+}
+
+
+
+.back-button {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 10px 20px;
+  margin: 0;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+
+
+  .horario-container h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #002a5c;
+  }
+  
+  .horario-container p {
+    color: #555;
+  }
+  
+  .horario-content {
+    margin: 0 auto;
+  }
+  
+  .horario-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    overflow-x: auto;
+  }
+  
+  .horario-table th,
+  .horario-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .horario-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+  }
+  
+  .horario-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #002a5c;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+
+  
+  .button:hover {
+    background-color: #003a8c;
+  }
+
+  .top-right {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  
+  .logout-button {
+    background-color: #f44336; /* Color de fondo del botón */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Espaciado interno */
+    text-align: center; /* Alineación del texto */
+    text-decoration: none; /* Sin subrayado */
+    display: inline-block; /* Mostrar en línea */
+    font-size: 16px; /* Tamaño de la fuente */
+    margin: 4px 2px; /* Margen */
+    cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
+    border-radius: 12px; /* Bordes redondeados */
+  }
+  
+  .logout-button:hover {
+    background-color: #d32f2f; /* Color de fondo al pasar el cursor */
+  }
+  
+  .field-group {
+    display: flex;
+    flex-wrap: wrap; /* Permite que el contenido se ajuste en columnas */
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  
+  .field-group label {
+    width: 100px;
+    margin-right: 10px;
+    text-align: left; /* Alinea el texto a la derecha */
+  }
+  
+  .field-group input,
+  .field-group select {
+    flex: 1;
+    min-width: 0; /* Evita que el input se expanda fuera del contenedor */
+    padding: 8px;
+    margin-top: 5px;
+  }
+  

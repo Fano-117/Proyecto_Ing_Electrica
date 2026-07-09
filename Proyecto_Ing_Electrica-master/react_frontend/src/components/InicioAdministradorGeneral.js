@@ -1,0 +1,45 @@
+import React, {useState} from "react";
+import "./InicioCoordinadorGen.css";
+import { Outlet, useNavigate,useLocation } from "react-router-dom";
+
+function InicioAdministradorGen() {
+
+  const navigate = useNavigate();
+
+  const location = useLocation();
+
+
+  const nombre = location.state?.nombre || "Administrador";
+
+
+  const handleLogout = () => {
+    localStorage.removeItem("isAuthenticated");
+    localStorage.removeItem("userType");
+    navigate("/");
+  };
+
+
+  return (
+    <div className="docente-layout">
+      <div className="docente-container">
+        <div className="logout-wrapper">
+          <button className="logout-button" onClick={handleLogout}>Cerrar sesión</button>
+        </div>
+        <h2>Administrador General</h2>
+        <h4>{`Bienvenido, ${nombre}`}</h4>
+        <h4>A continuacion, seleccione la lista que desee visualizar</h4>
+
+        <div className="buttons">
+          <button onClick={() => navigate("/admin-gen/alumnos")}>Administrar alumno</button>
+          <button onClick={() => navigate("/admin-gen/personal")}>Administrar personal</button>
+          <button onClick={() => navigate("/admin-gen/materias")}>Administrar materias</button>
+        </div>
+  
+        {/* Aquí se mostrará el componente de la ruta anidada */}
+        <Outlet />
+      </div>
+    </div>
+  );
+}
+
+export default InicioAdministradorGen;

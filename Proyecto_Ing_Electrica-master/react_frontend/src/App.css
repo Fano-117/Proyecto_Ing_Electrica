@@ -1,0 +1,184 @@
+/* Estilos responsivos para tablas y formularios */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  word-break: break-word;
+  font-size: 1rem;
+}
+
+th, td {
+  padding: 8px;
+  font-size: 1rem;
+  word-break: break-word;
+}
+
+.scrollable-table, .tutor-content {
+  width: 100%;
+}
+
+form, .formulario, .form-container, .search-bar, .max-hours-input {
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+input, select, textarea, button {
+  max-width: 100%;
+  font-size: 1rem;
+}
+
+@media (max-width: 1024px) {
+  table, th, td {
+    font-size: 0.95rem;
+    padding: 6px;
+  }
+  form, .formulario, .form-container, .search-bar, .max-hours-input {
+    font-size: 0.95rem;
+    padding: 6px;
+  }
+}
+
+@media (max-width: 768px) {
+  table, th, td {
+    font-size: 0.85rem;
+    padding: 4px;
+  }
+  form, .formulario, .form-container, .search-bar, .max-hours-input {
+    font-size: 0.85rem;
+    padding: 4px;
+  }
+  .scrollable-table, .tutor-content {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+
+}
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  overflow-x: auto; /* Permitir desplazamiento lateral en vista móvil */
+  min-height: 100vh; /* Asegúrate de que ocupe el 100% de la altura de la ventana */
+  margin: 0; /* Elimina márgenes no deseados */
+  padding: 0; /* Elimina rellenos no deseados */
+  width: 100%;        /* Cambia de 100vw a 100% */
+  min-width: 0;       /* Permite que se ajuste */
+  max-width: 100%;    /* Permite que se ajuste */
+}
+
+.Main-layout {
+  display: grid;
+  grid-template-columns: 120px 1fr 120px;
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.Header-wrapper {
+  margin-bottom: 140px; /* Espacio debajo del encabezado */
+}
+
+.Lat_iazquierda, .Lat_derecha {
+  background-color: #e0e0e0; 
+  min-height: 100vh; /* mínimo la altura de la ventana */
+  height: auto;      /* pero se expande si el contenido es mayor */
+}
+
+.Contenido {
+  padding: 1px;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;    
+  align-items: center;
+  width: 100%; /* Asegura que el contenido ocupe todo el espacio disponible */
+}
+
+/* Estilos responsivos para pantallas móviles */
+@media (max-width: 900px) {
+  .Pie_pagina {
+    width: 100%;
+    max-width: 100000px;
+    min-width: 500px; 
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 0 0 10px 10px;
+    font-size: 0.9rem;
+    padding: 10px 0;
+    box-sizing: border-box;
+  }
+
+  .App {
+    flex-direction: column;
+    padding: 10px; /* Ajusta el padding para móviles */
+    overflow-x: auto; /* Permitir desplazamiento lateral en vista móvil */
+  }
+
+  .Main-layout {
+    grid-template-columns: 1fr; /* Cambia a una sola columna */
+    grid-template-rows: auto; /* Ajusta las filas dinámicamente */
+  }
+
+  .Lat_iazquierda, .Lat_derecha {
+    display: none; /* Oculta las barras laterales en móviles */
+  }
+
+  .Contenido {
+    width: 100%; /* Asegura que el contenido ocupe todo el ancho */
+    padding: 10px; /* Ajusta el padding para móviles */
+  }
+
+  .Header-wrapper {
+    margin-bottom: 70px; /* Incrementa el margen debajo del encabezado para cubrir componentes en móviles */
+  }
+}
+
+/* Add margin above the footer */
+
+.Pie_pagina {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 100000px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  background: #f0f2f5;
+  border-radius: 0 0 18px 18px;
+  color: #002a5c;
+  font-size: 1rem;
+  box-sizing: border-box;
+  padding: 12px 0;
+}
+
+
+/* Para la barra lateral izquierda y derecha en modo reducido */
+.Lat_iazquierda.lat-barra-reducida,
+.Lat_derecha.lat-barra-reducida {
+  width: 100px !important;   /* La mitad de 120px */
+  min-width: 100px !important;
+  max-width: 100px !important;
+  transition: width 0.3s;
+}
+
+@media (min-width: 901px) {
+  .lat-barra-reducida ~ .Contenido .Header-wrapper,
+  .Main-layout .Header-wrapper,
+  .Header-wrapper {
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 60px;
+    padding-right: 60px;
+    box-sizing: border-box;
+  }
+
+  /* Solo cuando las barras laterales están reducidas */
+  .Main-layout .Header-wrapper,
+  .Header-wrapper {
+    padding-left: 100px !important;
+    padding-right: 100px !important;
+  }
+
+}
