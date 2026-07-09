@@ -8,6 +8,3 @@ Portal educativo
 
 ## Tecnologías utilizadas
 - JavaScript, HTML, CSS
-
-## Resumen
-Este proyecto forma parte de la colección de trabajos y ejercicios desarrollados para explorar distintas áreas de programación, desarrollo web, aplicaciones móviles o análisis de datos.
